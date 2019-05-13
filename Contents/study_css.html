@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./CSS/study_css_sample.css">
+    <title>CSSの勉強ページ</title>
+  </head>
+  <body bgcolor="e3e3e3">
+
+    <div class="CenterBackground">
+      <h1>CSSの機能一覧</h1>
+      <br>
+        <div class="CommonBox">
+          <div class="CommonLabel">ボーダーを設定する</div>
+          <div class="CommonContext">
+            <p>ボーダーの色、線の種類、幅の長さを指定できる。</p>
+            <p>上下左右をそれぞれ設定もできる。</p>
+
+            <pre>
+              .hoge{
+                border-top: type width color;
+                border-bottom: type width color;
+                border-left: type width color;
+                border-right: type width color;
+              }
+            </pre>
+              <p>type : 線の種類</p>
+              <p>widht : 線の幅の長さ</p>
+              <p>color : 線の色</p>
+              <br>
+              <hr>
+              例：
+              <pre>
+                hoge{
+                  border-top: solid 10px red;
+                  border-bottom: solid 10px blue;
+                  border-left: solid 10px yellow;
+                  border-right: solid 10px black;
+                }
+              </pre>
+
+              <style>
+                #border_sample{
+                  border-top: solid 10px red;
+                  border-bottom: solid 10px blue;
+                  border-left: solid 10px yellow;
+                  border-right: solid 10px black;
+                }
+              </style>
+              <p>結果：</p>
+              <div id="border_sample">
+                aaaa
+              </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="CommonBox">
+          <div class="CommonLabel">ボーダーの線の種類を指定する</div>
+          <div class="CommonContext">
+            <p>ボーダーの線の種類を指定できる</p>
+            <pre>
+              hoge{
+                border-style: type;
+              }
+            </pre>
+            <p>上下左右それぞれ別にしてもできる</p>
+            <pre>
+              hoge{
+                border-top-style-style: type;
+                border-bottom-style: type;
+                border-right-style: type;
+                border-left-style: type;
+              }
+            </pre>
+            <p>type : 線の種類</p>
+            <hr>
+            <p>type は下記の通り</p>
+            <div id="sample_border_type_dotted">dotted</div>
+            <div id="sample_border_type_dashed">dashed</div>
+            <div id="sample_border_type_solid">solid</div>
+            <div id="sample_border_type_double">double</div>
+            <div id="sample_border_type_groove">groove</div>
+            <div id="sample_border_type_ridge">ridge</div>
+            <div id="sample_border_type_inset">inset</div>
+            <div id="sample_border_type_outset">outset</div>
+            <div id="sample_border_style">
+              <p>上：dotted</p>
+              <p>下：dashed</p>
+              <p>左：solid</p>
+              <p>右：double</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="CommonBox">
+          <div class="CommonLabel">ボックスに影を付ける</div>
+          <div class="CommonContext">
+            <p>ボックスに影を指定できる</p>
+            <pre>
+              hoge{
+                  box-shadow: none horizon vertical blur extent color inset;
+              }
+            </pre>
+            <p>none:"none" と記述すると影を表示しない設定になる</p>
+            <p>horizon:影の表示する左右の座標 pxで指定する</p>
+            <p>負の値を指定することで左側に表示される</p>
+            <p>vertical:影の表示する上下の座標 pxで指定する</p>
+            <p>負の値を指定することで上側に表示される</p>
+            <p>blur:影のぼかし度</p>
+            <p>0 の値でぼかし無しで表示する。負の値は無効</p>
+            <p>extent:影の広がり具合</p>
+            <p>正の値で影が広がり、負の値で影が小さくなる</p>
+            <hr>
+            <p>例：</p>
+            <pre>
+              hoge{
+                box-shadow: 6px 6px 10px 3px red;
+              }
+            </pre>
+            <p>結果：</p>
+            <div id="sample_box_shadow">
+              影のサンプル表示
+            </div>
+            <br>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="CommonBox">
+          <div class="CommonLabel">テキストの行揃え</div>
+          <div class="CommonContext">
+            <p>テキストを揃える指定ができる</p>
+            <pre>
+              hoge{
+                text-align: type;
+              }
+            </pre>
+            <p>type : 揃える位置</p>
+            <hr>
+            <p>type は下記通り</p>
+            <p>left   : 左揃え</p>
+            <p>center : 中央揃え</p>
+            <p>right  : 右揃え</p>
+            <p>他に justify,start,end がある模様</p>
+            <hr>
+            <p>例：</p>
+            <pre>
+              hoge1{
+                text-align: left;
+              }
+              hoge2{
+                text-align: center;
+              }
+              hoge3{
+                text-align: right;
+              }
+            </pre>
+            <p>結果：</p>
+            <div id="sample_text_align_left">左揃え</div>
+            <div id="sample_text_align_center">中央揃え</div>
+            <div id="sample_text_align_right">右揃え</div>
+          </div>
+        </div>
+      <br>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+.TopContent{
+  background-color: white;
+  color: #ff9cf5;
+  text-align: left;
+  vertical-align: middle;
+  margin-top: -100%;
+  margin-left: -100%;
+  margin-right: -100%;
+  margin-bottom: 0%;
+  padding-top: 100%;
+  padding-left: 100%;
+  padding-right: 100%;
+}
+
+.HeaderTable{
+  border: solid 1px;
+  border-spacing: inherit;
+  table-layout: fixed;
+  width: 100%;
+  background-color: yellow;
+}
+
+.HeaderTh{
+  border: solid 1px;
+}
+
+.title{
+  color: rgb(255, 144, 237);
+}
+
+.CenterBackground{
+  background-color: white;
+  width:1000px;
+  height: auto;
+  margin : auto;
+}
+
+.CommonBox{
+  background-color: #ededed;
+  box-shadow: 6px 6px 10px 3px #595959;
+  width: 500px;
+  position: relative;
+  left: 50px;
+  margin:auto;
+}
+
+.CommonLabel{
+  font-weight: bold;
+  font-size: 120%;;
+  color: brack;
+  background-color: #d7d7d7;
+  width: auto;
+  border-left:solid 10px #afafaf;
+  box-shadow: 3px 3px 0px 1px #343434;
+}
+
+.CommonContext{
+  padding-left: 10px;
+}
