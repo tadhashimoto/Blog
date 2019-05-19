@@ -1,7 +1,7 @@
 $(function () {
     $("#sendMessage").click(function () {
         $.ajax({
-            url: "SendAndReceiveMessage.php",
+            url: "CommentPostingManager.php",
             type: "post",
             dataType: "json",
             data: {
@@ -11,16 +11,15 @@ $(function () {
         })
             .done(function (response) {
 
-                $("#result").val(response[0]);
-                $("#detail").val(response[1]);
-
+                $("#result").val(response.name);
+                $("#detail").val(response.value);
                 var temp = "";
-                response.forEach(function (value) {
-                    var name = value[0];
-                    var comment = value[1];
-                    var date = value[2];
-                    temp += "<p>" + name + "「" + comment + "」" + date + "</p>";
-                });
+                // response.forEach(function (value) {
+                //     var name = value[0];
+                //     var comment = value[1];
+                //     var date = value[2];
+                //     temp += "<p>" + name + "「" + comment + "」" + date + "</p>";
+                // });
 
                 var p = document.getElementById("messages");
                 p.innerHTML = temp;
