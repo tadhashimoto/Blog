@@ -3,12 +3,13 @@
 header('Content-Type: application/json');
 
 require "CommentWriting.php";
+require "CommentReading.php";
 
 $name = $_POST["name"];
 $message = $_POST["message"];
 
 WriteComment($name,$message);
 
-$ary = array("name" => "testUserName");
+$result = ReadComment();
 
-echo json_encode($ary);
+echo json_encode($result);

@@ -11,15 +11,15 @@ $(function () {
         })
             .done(function (response) {
 
-                $("#result").val(response.name);
+                $("#result").val("success");
                 $("#detail").val(response.value);
                 var temp = "";
-                // response.forEach(function (value) {
-                //     var name = value[0];
-                //     var comment = value[1];
-                //     var date = value[2];
-                //     temp += "<p>" + name + "「" + comment + "」" + date + "</p>";
-                // });
+                response.forEach(function (value) {
+                    var name = value[0];
+                    var comment = value[1];
+                    var date = value[2];
+                    temp += "<p>" + name + "「" + comment + "」" + date + "</p>";
+                });
 
                 var p = document.getElementById("messages");
                 p.innerHTML = temp;
