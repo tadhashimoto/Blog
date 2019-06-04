@@ -21,7 +21,7 @@ $(function () {
                     temp += "<p>" + name + "「" + comment + "」" + date + "</p>";
                 });
 
-                var p = document.getElementById("messages");
+                var p = document.getElementById("comment");
                 p.innerHTML = temp;
             })
             .fail(function (XMLHttpRequest, textStatus, errorThrown) {

@@ -78,30 +78,9 @@
 		<div>名前<input id="name" type="text" size="20" maxlength="10"></div>
 		<div>コメント<input id="message" type="text" size="100" maxlength="50"></div>
 		<button type="submit" id="sendMessage" size ="29">送信</button>
-	  </form>
-
-	  <section>
-		<?php
-		 if (!file_exists($LOG_FILE_NAME)) {
-			 echo "書き込みはありません";
-			 $linesNum = 0;
-		 } else {
-			 $lines = file($LOG_FILE_NAME);
-			 $linesNum = count($lines);
-		 }
-		  // 以下 ログの書き出し
-		  for ($i = 0; $i < $linesNum;$i++) {
-			  $array = explode($split, $lines[$i]);
-
-				$name = htmlspecialchars($array[0]);
-			  $message = htmlspecialchars($array[1]);
-				$date = htmlspecialchars($array[2]);
-				
-			  // 名前とメッセージの表示
-			  echo "<p>".$name."「".str_replace(PHP_EOL, "", $message)."」".$date."<p>";
-		  }
-		 ?>
-	  </section>
+		</form>
+		
+		<p id="comment"></p>
 
 	</div>
 	<br>
